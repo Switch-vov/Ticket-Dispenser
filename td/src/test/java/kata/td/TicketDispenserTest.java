@@ -1,7 +1,6 @@
 package kata.td;
 
 import org.junit.Test;
-import sun.security.krb5.internal.Ticket;
 
 import static org.junit.Assert.assertEquals;
 
@@ -53,6 +52,7 @@ public class TicketDispenserTest {
 
         // Assert
         assertEquals(11, ticket.getTurnNumber());
+        mockTurnNumberSequence.verifyMethodGetNextTurnNumberCalledOnce();
     }
 
     // TODO-new-feature: the turn number sequence of the vip customers starts from 1001
