@@ -14,8 +14,7 @@ public class TurnNumberSequence {
         this.turnNumber = firstNumber;
     }
 
-    public int getNextTurnNumber()
-    {
+    public int getNextTurnNumber() {
         return turnNumber++;
     }
 }
