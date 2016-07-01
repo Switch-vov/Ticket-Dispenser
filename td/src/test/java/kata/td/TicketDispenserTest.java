@@ -27,7 +27,7 @@ public class TicketDispenserTest {
     }
 
     @Test
-    public void a_new_ticket_should_hava_the_turn_number_subsequent_to_the_previous_ticket_from_another_dispenser() {
+    public void a_new_ticket_should_have_the_turn_number_subsequent_to_the_previous_ticket_from_another_dispenser() {
         // Arrange
         TicketDispenser ticketDispenser = new TicketDispenser();
         TicketDispenser anotherTicketDispenser = new TicketDispenser();
@@ -40,8 +40,12 @@ public class TicketDispenserTest {
         assertEquals(1, newTicket.getTurnNumber() - previousTicket.getTurnNumber());
     }
 
-    // TODO-unit-test: the ticket dispenser should dispenser the ticket number 11 if give a turn number 11 to it
-
+    // TODO-unit-test-working-on: the class TicketDispenser should dispenser the ticket number 11 if give a turn number 11 to it
+    @Test
+    public void the_class_TicketDispenser_should_dispense_the_ticket_number_11_if_give_a_turn_number_11_to_it() {
+        // Assert
+        assertEquals(11, ticket.getTurnNumber());
+    }
 
     // TODO-new-feature: the turn number sequence of the vip customers starts from 1001
     // TODO-new-feature: the turn number sequence of the regular customers starts from 2001
