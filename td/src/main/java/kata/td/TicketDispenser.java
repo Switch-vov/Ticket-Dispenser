@@ -1,8 +1,10 @@
 package kata.td;
 
 public class TicketDispenser {
-    public TicketDispenser(TurnNumberSequence turnNumberSequence) {
+    private TurnNumberSequence turnNumberSequence;
 
+    public TicketDispenser(TurnNumberSequence turnNumberSequence) {
+        this.turnNumberSequence = turnNumberSequence;
     }
 
     public TicketDispenser() {
