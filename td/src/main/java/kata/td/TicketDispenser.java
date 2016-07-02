@@ -8,7 +8,7 @@ public class TicketDispenser {
     }
 
     public TicketDispenser(TurnNumberSequence turnNumberSequence) {
-
+        this.turnNumberSequence = turnNumberSequence;
     }
 
     public TurnTicket getTurnTicket()
