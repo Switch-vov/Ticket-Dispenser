@@ -1,6 +1,7 @@
 package kata.td;
 
 import org.junit.Test;
+import sun.security.krb5.internal.Ticket;
 
 import static org.junit.Assert.assertEquals;
 
@@ -42,6 +43,14 @@ public class TicketDispenserTest {
     // TODO-unit-test-working-on: the class TicketDispenser should dispenser the ticket number 11 if give a turn number 11 to it
     @Test
     public void the_class_TicketDispenser_should_dispense_the_ticket_number_11_if_give_a_turn_number_11_to_it() {
+        // Arrange
+        TurnNumberSequence mockTurnNumberSequence = mock(TurnNumberSequence.class);
+        when(mockTurnNumberSequence.getNextTurnNumber()).thenReturn(11);
+        TicketDispenser ticketDispenser = new TicketDispenser(mockTurnNumberSequence);
+
+        // Act
+        TurnTicket ticket = ticketDispenser.getTurnTicket();
+
         // Assert
         assertEquals(11, ticket.getTurnNumber());
     }
