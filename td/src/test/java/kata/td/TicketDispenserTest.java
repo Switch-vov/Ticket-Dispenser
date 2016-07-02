@@ -1,7 +1,6 @@
 package kata.td;
 
 import org.junit.Test;
-import sun.security.krb5.internal.Ticket;
 
 import static org.junit.Assert.assertEquals;
 
