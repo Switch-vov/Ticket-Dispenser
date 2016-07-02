@@ -1,9 +1,11 @@
 package kata.td;
 
 import org.junit.Test;
-import sun.security.krb5.internal.Ticket;
 
 import static org.junit.Assert.assertEquals;
+import static org.mockito.Mockito.mock;
+import static org.mockito.Mockito.verify;
+import static org.mockito.Mockito.when;
 
 public class TicketDispenserTest {
     @Test
@@ -53,6 +55,7 @@ public class TicketDispenserTest {
 
         // Assert
         assertEquals(11, ticket.getTurnNumber());
+        verify(mockTurnNumberSequence).getNextTurnNumber();
     }
 
 
